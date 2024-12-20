@@ -122,6 +122,46 @@
             bottom: 0;
             width: 100%;
         }
+        .carousel {
+            position: relative;
+            margin: 20px auto;
+            max-width: 800px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-item {
+            min-width: 100%;
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            color: #333;
+        }
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-controls button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .carousel-controls button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -132,14 +172,36 @@
         <a href="#">Home</a>
         <a href="#features">Features</a>
         <a href="#why">Why Filo?</a>
-        <a href="#download">Download</a>
+        <a href="https://github.com/AmanVerma0047/Filo/raw/main/Filo-v0.1.4-windows-setup.exe" download>Download for windows</a>
     </nav>
+
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <h3><b>"I Can't Find My File When I Need It"</b></h3>
+                <p>Filo's paging mechanism ensures the file is instantly accessible,<br> saving time and reducing stress.</p>
+            </div>
+            <div class="carousel-item">
+                <h3><b>"My Files Are Scattered Everywhere"</b></h3>
+                <p> Filo organizes files for quick, categorized access.</p>
+            </div>
+            <div class="carousel-item">
+                <h3><b>"I Wasted alot of Time Navigating <br> Deep Folder Structures"</b></h3>
+                <p>Filo offers direct access to <br> frequently used files with one click.</p>
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button id="prev">&#10094;</button>
+            <button id="next">&#10095;</button>
+        </div>
+    </div>
+
     <div class="container">
         <section class="hero" id="home">
             <img src="press kit/3.png" style="height: 128px; width: 128px;">
             <h1>Welcome to Filo</h1>
             <p>Your ultimate file management tool to boost productivity.</p>
-            <a href="https://github.com/AmanVerma0047/Filo/raw/main/Filo-v0.1.4-windows-setup.exe" download>Download Now</a>
+            <a href="https://github.com/AmanVerma0047/Filo/raw/main/Filo-v0.1.4-windows-setup.exe" download>Download for windows</a>
         </section>
 
         <section class="features" id="features">
@@ -191,5 +253,29 @@
     <footer>
         <p>&copy; 2024 Filo. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        const carouselInner = document.querySelector('.carousel-inner');
+        const items = document.querySelectorAll('.carousel-item');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            const offset = -currentIndex * 100;
+            carouselInner.style.transform = `translateX(${offset}%)`;
+        }
+
+        prev.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+            updateCarousel();
+        });
+
+        next.addEventListener('click', () => {
+            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+            updateCarousel();
+        });
+    </script>
 </body>
 </html>
