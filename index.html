@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filo - Simplify Your Clipboard</title>
+    <title>Filo - Simplify Your Files</title>
     <style>
         body {
             font-family: 'Poppins', Arial, sans-serif;
@@ -22,14 +22,19 @@
             background-color: #202020;
             color: white;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
             align-items: center;
-            padding: 10px 20px;
+            padding: 20px 20px;
         }
         nav a {
             color: white;
             text-decoration: none;
             margin: 0 15px;
+        }
+
+        nav img{
+            width:48px;
+            height:48px;
         }
         nav a:hover {
             text-decoration: underline;
@@ -81,6 +86,13 @@
         .feature h3 {
             color: #202020;
         }
+        .feature video {
+            /* max-width: 100%; */
+            width: 700px; /* Set a specific width */
+            height: auto;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
         .why-filo {
             margin: 50px 0;
             padding: 20px;
@@ -114,48 +126,64 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Filo</h1>
-        <p>Simplify Your Clipboard, Elevate Your Workflow</p>
-    </header>
+
     <nav>
+        <img src = "press kit\2.png">
         <a href="#">Home</a>
         <a href="#features">Features</a>
         <a href="#why">Why Filo?</a>
         <a href="#download">Download</a>
     </nav>
-
     <div class="container">
         <section class="hero" id="home">
+            <img src="press kit/3.png" style="height: 128px; width: 128px;">
             <h1>Welcome to Filo</h1>
-            <p>Your ultimate clipboard manager to boost productivity.</p>
-            <a href="#download">Download Now</a>
+            <p>Your ultimate file management tool to boost productivity.</p>
+            <a href="https://github.com/AmanVerma0047/Filo/raw/main/Filo-v0.1.4-windows-setup.exe" download>Download Now</a>
         </section>
 
         <section class="features" id="features">
             <div class="feature">
-                <h3>Clipboard History</h3>
-                <p>Access all your copied items effortlessly.</p>
+                <h3>Quick File Access</h3>
+                <video src="filo-clips/clip-2.mp4" autoplay loop muted></video>
+                <p>Easily drag, drop, and open files directly from your workspace.</p>
             </div>
             <div class="feature">
-                <h3>Organized Categories</h3>
-                <p>Keep your clipboard neat and categorized.</p>
+                <h3>Organized Workspaces</h3>
+                <video src="filo-clips/clip-3.mp4" autoplay loop muted></video>
+                <p>Save and load customized workspaces for all your projects.</p>
             </div>
             <div class="feature">
-                <h3>Customizable Themes</h3>
-                <p>Match your style with light, dark, and colorful themes.</p>
+                <h3>Always on Top</h3>
+                <video src="filo-clips/clip-3.mp4" autoplay loop muted></video>
+                <p>Toggle "Always on Top" to keep Filo visible over other applications.</p>
+            </div>
+            <div class="feature">
+                <h3>Drag and Drop</h3>
+                <video src="filo-clips/clip-1.mp4" autoplay loop muted></video>
+                <p>Drag files and folders into Filo for easy management.</p>
+            </div>
+            <div class="feature">
+                <h3>Image Previews</h3>
+                <video src="filo-clips/clip-1.mp4" autoplay loop muted></video>
+                <p>Preview image files with thumbnails directly in the file list.</p>
+            </div>
+            <div class="feature">
+                <h3>Custom Context Menu</h3>
+                <video src="filo-clips/clip-4.mp4" autoplay loop muted></video>
+                <p>Right-click to access file management options, such as adding files or saving workspaces.</p>
             </div>
         </section>
 
         <section class="why-filo" id="why">
             <h2>Why Use Filo?</h2>
             <ul>
-                <li><strong>Boost Productivity:</strong> Filo keeps a history of everything you copy, so you never lose important snippets, links, or text.</li>
-                <li><strong>Stay Organized:</strong> Automatically categorize your clipboard items for quick access to text, links, images, and more.</li>
-                <li><strong>Customizable Experience:</strong> Make Filo your own with themes, layouts, and settings tailored to your workflow.</li>
-                <li><strong>Seamless Integration:</strong> Works across multiple devices (cloud sync) and integrates with apps like Google Docs, Notion, and more.</li>
-                <li><strong>Fast and Lightweight:</strong> Unlike bulky alternatives, Filo is optimized for speed and consumes minimal system resources.</li>
-                <li><strong>Free to Start:</strong> Get started with core features for free, and unlock advanced tools when you're ready to upgrade.</li>
+                <li><strong>Boost Productivity:</strong> Simplify file management with an intuitive interface.</li>
+                <li><strong>Stay Organized:</strong> Save and load workspaces tailored to your workflow.</li>
+                <li><strong>Quick Access:</strong> Open files instantly with a double-click.</li>
+                <li><strong>Customizable:</strong> Adjust settings and toggle features for a personalized experience.</li>
+                <li><strong>Lightweight:</strong> Optimized for performance with minimal system resource usage.</li>
+                <li><strong>Free to Start:</strong> Begin with the core features and unlock advanced tools when needed.</li>
             </ul>
         </section>
     </div>
